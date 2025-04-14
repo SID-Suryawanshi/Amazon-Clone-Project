@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+
+            <div class="nav-address">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-sec">India</p>
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                    <option value="opt">Amazon Fasion</option>
+                    <option value="opt">Bestseller</option>
+                    <option value="opt">Clothing</option>
+                    <option value="opt">Deals</option>
+                    <option value="opt">Electronics</option>
+                    <option value="opt">Furniture</option>
+                    <option value="opt">Grocery</option>
+                </select>
+                <input placeholder="Amazon search..." class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-signin">
+                <p class="sign-first">Hello, <a
+                        href="file:///home/siddhant/Desktop/Programs/.vscode/FrontEnd/login.html">Sign in</a></p>
+                <p class="sign-sec">Accounts & Lists</p>
+            </div>
+
+            <div class="nav-return">
+                <p class="return-first"><span>Returns</span></p>
+                <p class="return-sec">& Orders</p>
+            </div>
+
+            <div class="nav-cart" onclick="window.location.href='cart.html'">
+                <div class="cart-logo">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="navbar2">
+            <div class="nav2-all border nav2-position">
+                <i class="fa-solid fa-bars"></i>
+                <span>All</span>
+            </div>
+
+            <div class="nav2-fresh border nav2-position">
+                <a href="#">Fresh</a>
+            </div>
+
+            <div class="nav2-mx border nav2-position">
+                <a href="#">MX Player</a>
+            </div>
+
+            <div class="nav2-sell border nav2-position">
+                <a href="#">Sell</a>
+            </div>
+
+            <div class="nav2-best border nav2-position">
+                <a href="#">Bestseller</a>
+            </div>
+
+            <div class="nav2-mobile border nav2-position">
+                <a href="#">Mobiles</a>
+            </div>
+
+            <div class="nav2-deals border nav2-position">
+                <a href="#">Today's Deals</a>
+            </div>
+
+            <div class="nav2-prime border nav2-position">
+                <a href="#">Prime</a>
+            </div>
+
+            <div class="nav2-service border nav2-position">
+                <a href="#">Customer Service</a>
+            </div>
+
+            <div class="nav2-release border nav2-position">
+                <a href="#">New Release</a>
+            </div>
+
+            <div class="nav2-release border nav2-position">
+                <a href="#">Electronics</a>
+            </div>
+
+            <div class="nav2-release border nav2-position">
+                <a href="#">Fasion</a>
+            </div>
+
+            <div class="nav2-release border nav2-position">
+                <a href="#">Home & Kitchen</a>
+            </div>
+
+            <div class="nav2-release border nav2-position">
+                <a href="#">Computers</a>
+            </div>
+
+            <div class="nav2-release border nav2-position">
+                <a href="#">Books</a>
+            </div>
+
+            <div class="nav2-release border nav2-position">
+                <a href="#">Car & Motorbikes</a>
+            </div>
+
+            <div class="nav2-release border nav2-position">
+                <a href="#">Toys & Games</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <div class="hero-msg">
+                <p>You are on amazon.com. You can also shop on Amazon India for milions of products with fast local
+                    delivery. <a href="https://www.amazon.in/">Click here to go to amazon.in</a></p>
+            </div>
+        </div>
+
+        <div class="shop-section">
+            <div class="box1 box">
+                <div class="box-content" data-name="Health & Personal Care" data-price="499">
+                    <h2>Health & Personal Care</h2>
+                    <div class="box1-img"></div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <p><a href="#">See More</a></p>
+                </div>
+            </div>
+            <div class="box2 box">
+                <div class="box-content" data-name="Home Appliences" data-price="799">
+                    <h2>Home Appliences</h2>
+                    <div class="box2-img"></div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <p><a href="home_appliences.html">See More</a></p>
+                </div>
+            </div>
+            <div class="box3 box">
+                <div class="box-content" data-name="Electronics" data-price="15000">
+                    <h2>Electronics</h2>
+                    <div class="box3-img"></div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <p><a href="#">See More</a></p>
+                </div>
+            </div>
+            <div class="box4 box">
+                <div class="box-content" data-name="Furnitures" data-price="20000">
+                    <h2>Furnitures</h2>
+                    <div class="box4-img"></div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <p><a href="#">See More</a></p>
+                </div>
+            </div>
+
+            <div class="box1 box">
+                <div class="box-content" data-name="Clothing" data-price="299">
+                    <h2>Clothing</h2>
+                    <div class="box5-img"></div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <p><a href="#">See More</a></p>
+                </div>
+            </div>
+            <div class="box2 box">
+                <div class="box-content" data-name="Grocery" data-price="199">
+                    <h2>Grocery</h2>
+                    <div class="box6-img"></div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <p><a href="#">See More</a></p>
+                </div>
+            </div>
+            <div class="box3 box">
+                <div class="box-content" data-name="Kindle Store" data-price="899">
+                    <h2>Kindle Store</h2>
+                    <div class="box7-img"></div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <p><a href="#">See More</a></p>
+                </div>
+            </div>
+            <div class="box4 box">
+                <div class="box-content" data-name="Computers" data-price="30000">
+                    <h2>Computers</h2>
+                    <div class="box8-img"></div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <p><a href="#">See More</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="signin-btn">
+            <div class="signin-content">
+                <span>See personalized recommendations</span>
+                <div class="btn">
+                    <button>Sign in</button>
+                </div>
+                <p>New customer? <a href="#">Start here</a></p>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="foot-panel1">
+            <a href="#">Back To Top</a>
+        </div>
+
+        <div class="foot-container shop-section">
+            <div class="links-container foot-box">
+                <h2>Get to Know Us</h2>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Amazon Device</a></li>
+                    <li><a href="#">Amazon Science</a></li>
+                </ul>
+            </div>
+            <div class="links-container foot-box">
+                <h2>Make Money with Us</h2>
+                <ul>
+                    <li><a href="#">Sell products on Amazon</a></li>
+                    <li><a href="#">Sell on Amazon Business</a></li>
+                    <li><a href="#">Sell apps on Amazon</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                    <li><a href="#">Self-Publish with Us</a></li>
+                    <li><a href="#">Host an Amazon Hub</a></li>
+                    <li><a href="#">See More Make Money with Us</a></li>
+                </ul>
+            </div>
+            <div class="links-container foot-box">
+                <h2>Amazon Payment Products</h2>
+                <ul>
+                    <li><a href="#">Amazon Business Card</a></li>
+                    <li><a href="#">Shop with Points</a></li>
+                    <li><a href="#">Reload Your Balance</a></li>
+                    <li><a href="#">Amazon Currency Converter</a></li>
+                </ul>
+            </div>
+            <div class="links-container foot-box">
+                <h2>Let Us Help You</h2>
+                <ul>
+                    <li><a href="#">Amazon and COVID-19</a></li>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Return & replacements</a></li>
+                    <li><a href="#">MAnahe Your Content & Devices</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="foot-panel2">
+            <div class="logo"></div>
+            <div class="lang">
+                <i class="fa-solid fa-globe"></i>
+                <p>English</p>
+            </div>
+        </div>
+
+        <div class="foot-panel3">
+            <div class="pages">
+                <a href="#">Conditions of Use & Sale</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Interest-Based Ads</a>
+            </div>
+            <span>&copy; 1996-2025, Amazon.com, Inc. or its affiliate</span>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
