@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.amz-logo{
+    height: 8rem;
+    /* border: 2px solid; */
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.amz-logo .logo{
+    background-image: url("amz.png");
+    height: 100%;
+    width: 30%;
+    /* border: 2px solid; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 18rem;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+}
+.wrapper{
+    height: 20rem;
+    width: 20rem;
+    border: 2px solid black;
+
+}
