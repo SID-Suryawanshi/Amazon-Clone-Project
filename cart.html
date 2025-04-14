@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background-color: #f3f3f3; }
+    .cart-item { background: white; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); padding: 15px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+    .cart-item input { width: 50px; text-align: center; }
+    .remove-btn { background-color: red; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 5px; }
+    .total { font-weight: bold; margin-top: 20px; }
+    .checkout-form { margin-top: 30px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+    .checkout-form input, .checkout-form textarea, .checkout-form select {
+      width: 100%; margin-top: 10px; padding: 10px; border-radius: 4px; border: 1px solid #ccc;
+    }
+    .checkout-form button {
+      margin-top: 15px; padding: 12px; width: 100%; background-color: green;
+      color: white; font-weight: bold; border: none; cursor: pointer; border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Your Shopping Cart</h1>
+  <div id="cart-container"></div>
+
+  <div class="checkout-form">
+    <h2>Checkout</h2>
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Email Address" required />
+    <textarea id="address" rows="4" placeholder="Shipping Address" required></textarea>
+    <select id="payment-method" required>
+      <option value="">Select Payment Method</option>
+      <option value="credit">Credit/Debit Card</option>
+      <option value="cod">Cash on Delivery</option>
+      <option value="upi">UPI</option>
+      <option value="netbanking">Net Banking</option>
+    </select>
+    <button onclick="checkout()">Place Order</button>
+  </div>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const container = document.getElementById("cart-container");
+
+    function renderCart() {
+      container.innerHTML = '';
+      let total = 0;
+
+      if (cart.length === 0) {
+        container.innerHTML = "<p>Your cart is empty.</p>";
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className = "cart-item";
+
+        div.innerHTML = `
+          <div><strong>${item.name}</strong></div>
+          <div>₹${item.price}</div>
+          <div>
+            <input type="number" min="1" value="${item.quantity || 1}" onchange="updateQuantity(${index}, this.value)">
+          </div>
+          <div>
+            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+          </div>
+        `;
+
+        total += item.price * (item.quantity || 1);
+        container.appendChild(div);
+      });
+
+      const totalDiv = document.createElement("div");
+      totalDiv.className = "total";
+      totalDiv.textContent = `Total: ₹${total}`;
+      container.appendChild(totalDiv);
+    }
+
+    function updateQuantity(index, newQty) {
+      cart[index].quantity = parseInt(newQty) || 1;
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    function checkout() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const payment = document.getElementById("payment-method").value;
+
+      if (!name || !email || !address || !payment) {
+        alert("Please fill out all checkout fields.");
+        return;
+      }
+
+      const order = {
+        id: Date.now(),
+        name,
+        email,
+        address,
+        payment,
+        items: cart,
+        date: new Date().toLocaleString()
+      };
+
+      // Store order history in localStorage
+      const orderHistory = JSON.parse(localStorage.getItem("orderHistory")) || [];
+      orderHistory.push(order);
+      localStorage.setItem("orderHistory", JSON.stringify(orderHistory));
+
+      // Mock confirmation
+      alert(`Thank you, ${name}! Your order has been placed.\nConfirmation sent to: ${email}`);
+
+      // Clear cart
+      localStorage.removeItem("cart");
+      window.location.reload();
+    }
+
+    renderCart();
+  </script>
+</body>
+</html>
