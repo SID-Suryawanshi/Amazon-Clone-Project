@@ -271,6 +271,7 @@
     background-color: #f8ce44;
     padding: .5rem;
     border-radius: 30%;
+    cursor: pointer;
 }
 
 .box-content{
