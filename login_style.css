@@ -66,6 +66,11 @@
     background-color: rgb(228, 159, 12);
 }
 
+.wrapper span{
+    text-align: center;
+    color: black;
+} 
+
 .wrapper .tc{
     margin-top: 40px;
     color: black;
