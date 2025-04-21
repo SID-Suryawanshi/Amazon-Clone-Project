@@ -193,10 +193,10 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
+/* }
 .navbar2 .nav2-all{
     height: 100%;
-}
+} */
 .nav2-all .nav2-select{
     height: 100%;
     font-weight: 600;
