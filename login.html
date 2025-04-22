@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login_style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="amz-logo">
+        <div class="logo"></div>
+      </div>
+    </header>
+    <main>
+      <div class="login-container">
+        <div class="wrapper">
+          <p>Sign In</p>
+          <input
+            type="text"
+            id="fullname"
+            placeholder="Enter mobile number or email"
+            onclick="return fullname(event)"
+            required
+          />
+          <input type="password" placeholder="Enter password" id="">
+          <button>Continue</button>
+
+          <span class="signup"
+            >Don't have an account?<a href="signup.html">Sign Up</a></span
+          ><br />
+
+          <span class="tc"
+            >By Continuing, you agree to Amazon's
+            <a href="#">Conditions of Use</a><span class="tc"> and </span
+            ><a href="#">Privacy Notice</a></span
+          ><br />
+
+          <span class="bfw"
+            >Buying for work<br />
+            <a href="#">Shop on Amazon Business</a>
+          </span>
+
+          <div class="bottom">
+            <a href="#">Conditions of Use</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Help</a>
+          </div>
+
+          <span>&copy;1996-2025, Amazon.com, Inc. or its affiliates</span>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    function fullname(event) {
+      var charCode = event.which;
+      if (charCode >= 48 && charCode <= 57) {
+        return false;
+      }
+      return true;
+    }
+  </script>
+</html>
